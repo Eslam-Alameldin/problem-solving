@@ -33,6 +33,46 @@ function readLine() {
 
 function solve(arr, queries) {
   // Write your code here
+  let results = [];
+
+  for (let d of queries) {
+    // Store maximums of each sliding window of size d
+    let maxInWindows = [];
+
+    let deque = []; // This will store indices of arr
+
+    // Initialize the deque for the first window of size d
+    for (let i = 0; i < d; i++) {
+      while (deque.length > 0 && arr[deque[deque.length - 1]] <= arr[i]) {
+        deque.pop();
+      }
+      deque.push(i);
+    }
+
+    // Process the rest of the elements
+    for (let i = d; i <= arr.length; i++) {
+      // The front of the deque is the maximum for the last window
+      maxInWindows.push(arr[deque[0]]);
+
+      // Remove elements outside the current window
+      while (deque.length > 0 && deque[0] <= i - d) {
+        deque.shift();
+      }
+
+      // Add the current element, removing elements smaller than it
+      if (i < arr.length) {
+        while (deque.length > 0 && arr[deque[deque.length - 1]] <= arr[i]) {
+          deque.pop();
+        }
+        deque.push(i);
+      }
+    }
+
+    // Find the minimum of all maximums in windows of size d
+    results.push(Math.min(...maxInWindows));
+  }
+
+  return results;
 }
 
 function main() {
