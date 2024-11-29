@@ -4,7 +4,7 @@ Welcome to my **LeetCode** and **HackerRank** solutions repository! 🚀 This re
 
 ## About the Repository
 
-This repository contains solutions to a variety of problems from **LeetCode** and **HackerRank**, written in multiple programming languages such as **JavaScript**, **TypeScript**, and **Python**.
+This repository is a collection of solutions to problems from **LeetCode** and **HackerRank**, written in languages like JavaScript, TypeScript, Python, or other relevant languages. It's a work-in-progress where I continuously learn, practice, and improve my problem-solving skills.
 
 ### Folder Breakdown:
 - **LeetCode**: Solutions will be categorized by difficulty level soon.
@@ -22,4 +22,4 @@ Contributions are welcome! Feel free to fork the repo, submit pull requests, or 
 ## Contact
 Have any questions or feedback? Reach out, and let's discuss!
 
-Happy coding! 😊
+**Happy coding! 😊**
